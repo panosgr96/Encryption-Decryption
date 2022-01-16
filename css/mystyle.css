@@ -1,0 +1,65 @@
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+
+  ::-webkit-scrollbar{
+    display: none; 
+  } 
+
+  html {
+      position: relative;
+      min-height: 100%;
+  }
+
+  body {
+      margin: 0 0 100px; /* bottom = footer height */
+  }
+
+  footer {
+      background-color: orange;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 100px;
+      width: 100%;
+      overflow:hidden;
+  }
+
+  button.accordion {
+      background-color: #fff;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 1s;
+  }
+
+  button.accordion.active, button.accordion:hover {
+      background-color: #eee;
+  }
+
+  button.accordion:after {
+      content: '\002B';
+      color: #eee;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+  }
+
+  button.accordion.active:after {
+      content: "\2212";
+  }
+
+  div.panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 1s ease-out;
+  }
+
+  .floatLeft{
+    float:left;
+  }
